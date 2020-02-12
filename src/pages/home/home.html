@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ 
+
+
+
+  <ion-slides autoplay="1000" loop="true" speed="500" pager >
+    
+    <ion-slide *ngFor="let image of imageContainer" style="width: 328px; height: 205.89px;">
+       <img src="{{ image.url }}">
+     </ion-slide>
+   </ion-slides>
+
+  <div class="centro">
+    <h1>Notícias</h1>
+        
+    <ion-list>
+
+      <ion-item *ngFor="let n of news" (click)="detalhe(n)" >
+        <ion-thumbnail item-left>
+          <img src="{{n?.image}}">
+        </ion-thumbnail>
+        <h2>{{n?.title}}</h2>
+        <b></b>
+        <h3>{{n?.subtitle}}</h3>
+      </ion-item>
+
+
+    </ion-list>
+  </div>        
+</ion-content>

@@ -1,0 +1,36 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+  
+    <p class="p1">Bem vindo de novo,</p>
+    <p class="p2">entre para continuar</p>
+
+  <ion-item class="text">
+    <ion-label >e-mail</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item class="text">
+      <ion-label >Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="senha"></ion-input>
+  </ion-item>
+</ion-list>
+
+<ion-item class="text2">
+  <button ion-button block round (click)="fazerlogin()">Entrar</button>
+</ion-item>
+  <p (click)="abrirCadastro()" class="p3">ou crie sua conta</p>
+
+</ion-content>

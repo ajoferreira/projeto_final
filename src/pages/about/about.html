@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Explorar
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <!-- <ion-item *ngFor="let n of news" (click)="detalhe(n)" >
+      <ion-thumbnail item-left>
+        <img src="{{n?.image}}">
+      </ion-thumbnail>
+      <h2>{{n?.title}}</h2>
+      <b></b>
+      <h3>{{n?.subtitle}}</h3>
+
+    
+    </ion-item> -->
+
+    <ion-card *ngFor="let n of cadlugar">
+      <!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=Santa%20%C3%9Arsula%20Botafogo%20Rio%20de%20Janeiro&zoom=15&size=280x170&maptype=roadmap%20&markers=color:green%7Clabel:AA%7C-22.941139,-43.182963%20&key=AIzaSyBrEzwYA0_tAI7Q_TgPG_nqUHSbbNWfoMc">
+      <ion-fab right top>
+        <button ion-fab>
+          <ion-icon name="pin"></ion-icon>
+        </button>
+      </ion-fab> -->
+    
+      <ion-item>
+        <ion-icon name="school" item-start large></ion-icon>
+        <h2>{{n?.namelugar}}</h2>
+        <p>{{n?.addresslugar}}</p>
+        <p>{{n?.tellugar}}</p>
+      </ion-item>
+    
+      <ion-item>
+        <!-- <span item-start>18 min</span>
+        <span item-start>(2.6 mi)</span> -->
+        <button ion-button icon-start clear item-end (click)="vermais(n)">
+          <ion-icon name="search"></ion-icon>
+          Ver Mais...
+        </button>
+      </ion-item>
+    
+    </ion-card>
+
+    
+    <!-- <div #map id="map"></div> -->
+
+</ion-list>
+</ion-content>

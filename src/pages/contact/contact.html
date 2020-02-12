@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profissionais
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-list>
+    
+    <ion-card *ngFor="let n of cadprof">
+      <!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=Santa%20%C3%9Arsula%20Botafogo%20Rio%20de%20Janeiro&zoom=15&size=280x170&maptype=roadmap%20&markers=color:green%7Clabel:AA%7C-22.941139,-43.182963%20&key=AIzaSyBrEzwYA0_tAI7Q_TgPG_nqUHSbbNWfoMc">
+      <ion-fab right top>
+        <button ion-fab>
+          <ion-icon name="pin"></ion-icon>
+        </button>
+      </ion-fab> -->
+    
+      <ion-item>
+        <ion-icon name="doctor" item-start large></ion-icon>
+        <h2>{{n?.nomeprof}}</h2>
+        <p>{{n?.telefoneprof}}</p>
+        <p>{{n?.crp}}</p>
+      </ion-item>
+    
+      <ion-item>
+        <!-- <span item-start>18 min</span>
+        <span item-start>(2.6 mi)</span> -->
+        <button ion-button icon-start clear item-end (click)="vermais(n)">
+          <ion-icon name="search"></ion-icon>
+          Ver Mais...
+        </button>
+      </ion-item>
+    
+    </ion-card>
+    <!-- <ion-list-header>Follow us on Twitter</ion-list-header>
+    <ion-item>
+     <ion-icon name="ionic" item-start></ion-icon>
+      
+    </ion-item> -->
+  </ion-list>
+</ion-content>
